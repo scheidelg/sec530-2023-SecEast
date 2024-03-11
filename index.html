@@ -1,87 +1,18 @@
-<!-- Redirect to the OneNote notebook for this class.
-
-     The class will have an 'edit' URL through which the class can access the
-     notebook for editing.  This page will, when first set up, redirect to
-     that edit URL.
-
-     The edit URL will typically have an expiration date, after which the
-     class will need to use a 'view' URL.  This page's JavaScript code will
-     start redirecting to the view URL one day before the edit URL's
-     expiration date.
-
-     To account for the possibility that the JavaScript doesn't work for a
-     client, an HTTP redirect is also used in the HTML header.  Similarly,
-     the HTML body includes a message identifying the redirect target.
-
-     -----
-     How to use:
-
-      1. Set up DNS and primary URL to resolve to this page.
-
-      2. Set up the edit and view URLs.
-
-      2. Update the variables in the comments below, the JavaScript code,
-         and the HTML code.
-
-      3. If the edit URL does have an expiration date, then remember to come
-         back just ahead of the expiration date and update the hard-coded HTTP
-         redirect to use the view URL.  Again, just to account for the
-         possibility that the JavaScript doesn't work for a client.
-
-     -----
-     Variables that need to be updated for a given class:
-
-         class-name-short: SEC530
-
-             The short name of the class.
-
-         class-title:      SANS Security East 2023 - NOLA
-
-             The title of the class.
-
-         edit-exp-year:    2023
-
-             The year during which the edit URL expires.
-
-         edit-exp-month:   02
-
-             The month during which the edit URL expires.
-
-         edit-exp-day:     04
-
-             The day on which the edit URL expires.
-
-         edit-URL:        https://1drv.ms/u/s!AmX2EQD23qhmnyYhPf7CO9YP0nQG
-
-             The OneNote URL that allows edit access to the OneNote notebook.
-
-         view-URL:        https://1drv.ms/u/s!AmX2EQD23qhmnyYRZOHGb7-AQ9CN
-
-             The OneNote URL that allows view access to the OneNote notebook.
--->
+<!-- Redirect to the OneNote notebook for this site. -->
 
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Use JavaScript to redirect based on current date.  If the current
-         date is before the date the edit URL expires, then redirect to the
-         edit URL; else redirect to the view URL. -->
+    <!-- Use JavaScript to redirect based on -->
     <script>
-      if (new Date() < new Date(2023, (02 - 1), 04)) {
-        window.location.href = "https://1drv.ms/u/s!AmX2EQD23qhmnyYhPf7CO9YP0nQG";
-      } else {
-        window.location.href = "https://1drv.ms/u/s!AmX2EQD23qhmnyYRZOHGb7-AQ9CN";
-      }
+      window.location.href = "https://1drv.ms/o/s!AmX2EQD23qhmsjQwLuH4mYuBLMNU";
     </script>
 
-    <!-- HTTP redirect in case the JavaScript fails; initially use the edit
-         URL; just ahead of edit URL expiration, update to the view
-         URL. -->
-    <meta http-equiv="Refresh" content="0; url=https://1drv.ms/u/s!AmX2EQD23qhmnyYhPf7CO9YP0nQG" />
+    <!-- HTTP redirect in case the JavaScript fails. -->
+    <meta http-equiv="Refresh" content="0; url=https://1drv.ms/o/s!AmX2EQD23qhmsjQwLuH4mYuBLMNU" />
   </head>
   <body>
-    <!-- Display message about redirect.  Initially use the edit URL; just
-         ahead of edit URL expiration, update to the view URL. -->
-    <p>Redirecting to <a href="https://1drv.ms/u/s!AmX2EQD23qhmnyYhPf7CO9YP0nQG">the OneNote notebook</a> for SEC530 at SANS Security East 2023 - NOLA.</p>
+    <!-- Display message about redirect. -->
+    <p>Redirecting to <a href="https://1drv.ms/o/s!AmX2EQD23qhmsjQwLuH4mYuBLMNU">the OneNote notebook</a> for general SEC530 Notes and Resources.</p>
   </body>
 </html>
